@@ -1,15 +1,6 @@
 name: Run Python Script Automatically
 
-on:
-  schedule:
-    # Cron schedule to run the script every 30 minutes
-    - cron: "*/30 * * * *"
-  workflow_dispatch:  # Allows manual trigger of the workflow
-    inputs:
-      script_name:
-        description: "Name of the Python script"
-        default: "././script.py"
-        required: false
+on: push
 
 jobs:
   run-script:
