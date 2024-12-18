@@ -1,6 +1,9 @@
 name: Run Python Script Automatically
 
-on: push
+on:
+  push:  # Trigger on push to the repository
+  schedule:  # Schedule the workflow to run daily at 8:00 AM
+    - cron: "*/2 * * * *" 
 
 jobs:
   run-script:
@@ -18,7 +21,9 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Install dependencies (if any)
+          pip install pushbullet.py  # Install the Pushbullet library
 
       - name: Run Python Script
-        run: python script.py  # Replace 'script.py' with your Python file name
+        env:
+          TOKEN_PUSHBULLET: ${{ secrets.TOKEN_PUSHBULLET }}  # Pass the secret to the script
+        run: python script.py
