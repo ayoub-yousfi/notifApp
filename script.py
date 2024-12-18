@@ -5,7 +5,7 @@ import os
 # Pushbullet API token (from Pushbullet settings page)
 TOKEN_PUSHBULLET = os.getenv("TOKEN_PUSHBULLET")
 if not TOKEN_PUSHBULLET:
-    raise ValueError("Pushbullet API key not found in environment variables")
+    raise ValueError("Pushbullet API key not found in environment variables") 
 
 # List of Duas
 duas = [
