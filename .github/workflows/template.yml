@@ -8,7 +8,7 @@ on:
     inputs:
       script_name:
         description: "Name of the Python script"
-        default: "script.py"
+        default: "././script.py"
         required: false
 
 jobs:
