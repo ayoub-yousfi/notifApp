@@ -5,7 +5,7 @@ import os
 # Pushbullet API token (from Pushbullet settings page)
 TOKEN_PUSHBULLET = os.getenv("TOKEN_PUSHBULLET")
 if not TOKEN_PUSHBULLET:
-    raise ValueError("Pushbullet API key not found in environment variables") 
+    raise ValueError("Pushbullet API key not found in environment variables")
 
 # List of Duas
 duas = [
@@ -23,7 +23,5 @@ def send_daily_dua():
     pb.push_note("Your Daily Dua", dua)  # Send the Dua as a notification to your phone
     print("Dua sent to Pushbullet!")
 
-# Call the function daily
-while True:
-    send_daily_dua()
-    time.sleep(86400)  # Wait for 24 hours before sending again
+# Call the function once (no infinite loop)
+send_daily_dua()
