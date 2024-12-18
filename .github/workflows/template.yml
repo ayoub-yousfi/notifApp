@@ -1,0 +1,19 @@
+name: Run Python Script Automatically
+
+on: push
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest  # Use a Linux environment
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3  # Check out the repository code
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"  # Specify your Python version
+
+      - name: Run Python Script
+        run: python script.py  # Replace 'script.py' with your Python file name
