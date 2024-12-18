@@ -1,8 +1,11 @@
 from pushbullet import Pushbullet
 import time
+import os
 
 # Pushbullet API token (from Pushbullet settings page)
-API_KEY = "wwwwww"
+TOKEN_PUSHBULLET = os.getenv("TOKEN_PUSHBULLET")
+if not TOKEN_PUSHBULLET:
+    raise ValueError("Pushbullet API key not found in environment variables")
 
 # List of Duas
 duas = [
@@ -12,7 +15,7 @@ duas = [
 ]
 
 # Initialize Pushbullet with the API key
-pb = Pushbullet(API_KEY)
+pb = Pushbullet(TOKEN_PUSHBULLET)
 
 # Function to send a daily Dua
 def send_daily_dua():
