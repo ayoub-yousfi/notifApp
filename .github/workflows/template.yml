@@ -1,0 +1,33 @@
+name: Run Python Script Automatically
+
+on:
+  schedule:
+    # Cron schedule to run the script every 30 minutes
+    - cron: "*/30 * * * *"
+  workflow_dispatch:  # Allows manual trigger of the workflow
+    inputs:
+      script_name:
+        description: "Name of the Python script"
+        default: "script.py"
+        required: false
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest  # Use a Linux environment
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3  # Check out the repository code
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"  # Specify your Python version
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Install dependencies (if any)
+
+      - name: Run Python Script
+        run: python script.py  # Replace 'script.py' with your Python file name
