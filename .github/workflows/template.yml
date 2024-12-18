@@ -1,9 +1,10 @@
 name: Run Python Script Automatically
 
 on:
-  push:  # Trigger on push to the repository
   schedule:  # Schedule the workflow to run daily at 8:00 AM
     - cron: "*/2 * * * *" 
+  push:  # Trigger on push to the repository
+
 
 jobs:
   run-script:
