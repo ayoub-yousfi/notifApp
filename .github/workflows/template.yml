@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 8 * * *"    # 8:00 AM
     - cron: "0 12 * * *"    # 12:00 AM (midnight)
-    - cron: "35 17 * * *"  # 5:35 PM
+    - cron: "00 18 * * *"  # 5:35 PM
 
 
 
