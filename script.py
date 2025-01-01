@@ -10,10 +10,10 @@ url = "https://api.brevo.com/v3/smtp/email"
 
 # Payload with email details
 payload = {
-    "sender": {"name": "Your Name", "email": "ayoub.yousfi.enetcom@gmail.com"},
-    "to": [{"email": "ayoub.yousfi.enetcom@gmail.com", "name": "Recipient Name"}],
-    "subject": "Test Email from Brevo API",
-    "htmlContent": "<p>This is a test email sent via Brevo API.</p>"
+    "sender": {"name": "Dua", "email": "ayoub.yousfi.enetcom@gmail.com"},
+    "to": [{"email": "ayoub.yousfi.enetcom@gmail.com", "name": "Ayoub"}],
+    "subject": "Morning Dua",
+    "htmlContent": "اللّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ وَجَمِيعَ خَلْقِكَ أَنَّكَ أَنتَ اللّهُ لَا إِلٰهَ إِلَّا أَنتَ وَحْدَكَ لَا شَرِيكَ لَكَ وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ"
 }
 
 # Headers for API request
