@@ -31,5 +31,5 @@ jobs:
 
       - name: Run Python Script
         env:
-          TOKEN_PUSHBULLET: ${{ secrets.TOKEN_PUSHBULLET }}  # Pass the secret to the script
+          BREVO_KEY: ${{ secrets.BREVO_KEY }}  # Pass the secret to the script
         run: python script.py
