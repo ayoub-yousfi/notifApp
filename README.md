@@ -64,6 +64,7 @@ To test the workflow:
 ## Notes
 - Ensure the sender email address used in the script is authorized in your Brevo account.
 - Customize the Dua messages and email details as needed.
+- You may notice that the schedule type isn't as precise as expected, but don't worry—it's not your fault. This is a limitation of GitHub Actions.
 
 ## Troubleshooting
 - If the workflow fails, check the logs in the Actions tab for error messages.
