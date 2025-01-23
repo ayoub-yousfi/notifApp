@@ -1,4 +1,4 @@
-# README: Sending Scheduled Emails with Brevo using GitHub Actions
+# Sending Scheduled Emails with Brevo using GitHub Actions
 
 This project automates the sending of daily Dua emails at specific times (morning, midday, and midnight) using the Brevo (formerly Sendinblue) API and GitHub Actions for scheduling. Below is a guide on how to set up and use this repository.
 
